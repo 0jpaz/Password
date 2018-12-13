@@ -29,7 +29,13 @@ function randomWord(len){
 //returns a string of random letters and numbers of the proper length
 function randomPass(len){
 
+let pass = "";
 
+for (let i = 0; i < len.length; i++){
+
+  let randomNumber = Math.floor(10*Math.random())+40;
+  pass += String.fromCharCode(randomNumber);
+}
 }
 
 
