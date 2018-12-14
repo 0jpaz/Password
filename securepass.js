@@ -57,6 +57,14 @@ for(let i = 0; i < password.length; i++){
 //returns true or false if there is a numerical character
 function numberCheck(password){
 
+  for(let i = 0; i < password.length; i++){
+
+    if(password.CharCode(i) >= 33 && (password.CharCode(i) <= 47)){
+      return true;
+    }
+    else if(password.CharCodeAt(i) < 65 || (password.CharCodeAt(i) > 90)){
+
+    }
 
 }
 
@@ -72,11 +80,20 @@ function specialCheck(check){
   if(password.CharCode(i) >= 33 && (password.CharCod(i) <= 47 )){
     return true;
 
-    if(password.CharCode(i)
-
+    if(password.CharCodeAt(i) >= 58 && (password.CharCodeAt(i) <= 64)){
+      return true;
+    }
+    if(password.CharCodeAt(i) >= 91 && (password.CharCodeAt(i) <= 96)){
+      return true;
+    }
+    if(password.CharCodeAt(i) >= 125 && (password.CharCodeAt(i) <= 127)){
+      return true;
+    }
+    if(password.CharCodeAt(i) >= 65 && (password.CharCodeAt(i) <= 90)){
+      return false;
+    }
+  }
 }
-
-
 
 
 
@@ -113,4 +130,3 @@ if passedAllChecks(password)){
 }
 if(passedAllChecks(password) && password.length >= 20){
   return "super!";
-}
